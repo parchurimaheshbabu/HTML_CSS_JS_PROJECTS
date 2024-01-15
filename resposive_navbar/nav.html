@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+<body>
+    <nav>
+        <div class="menu" onclick="togglemenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo">
+            LOGO
+        </div>
+        <ul class="navlinks">
+            <li><a herf="./home.html">Home</a></li>
+            <li><a herf="about.html">About</a></li>
+            <li><a herf="contact.html">contact</a></li>
+            <li><a herf="signin.html">Sign in</a></li>
+            <li><a herf="signup.html">sign up</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, expedita incidunt ea ex, pariatur neque deserunt ipsum dicta, libero molestias magnam ab in id voluptatem vero mollitia. Quas, quidem sunt?
+    
+        This JavaScript code is used to select an HTML element with the class "navlinks" and toggle the presence of another class called "active" on that element. Let's break it down:
+
+        javascript
+        Copy code
+        let nav = document.querySelector(".navlinks");
+        This line selects the first HTML element with the class "navlinks" and assigns it to the variable nav. The document.querySelector method is a JavaScript method that returns the first element within the document that matches the specified CSS selector.
+        
+        javascript
+        Copy code
+        function togglemenu() {
+            nav.classList.toggle('active');
+        }
+        This function is called togglemenu, and when it's executed, it toggles the presence of the class "active" on the selected HTML element (nav). The classList.toggle method adds the class if it's not present and removes it if it is. In other words, if the "active" class is not present, it will be added; if it's already present, it will be removed.
+        
+        So, in practical terms, this code is likely part of a website's navigation functionality. When some action triggers the togglemenu function, it will toggle the visibility or style of the navigation links by adding or removing the "active" class on the element with the class "navlinks". This is a common technique used in web development for creating toggleable menus or dropdowns.
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    <script>
+        let nav=document.querySelector(".navlinks");
+        function togglemenu(){
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

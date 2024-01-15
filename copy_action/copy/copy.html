@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>copy_operation</title>
+    <style>
+        .whole{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 20px;
+            left:50%
+        }
+        .data{
+            
+        }
+      textarea {
+        width: 210px;
+        margin-top: 10px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="whole">
+     <div class="data">
+            <h3 >Copy to clip board </h3>
+
+     <input type="text" id="copypaste" value="" />
+    <button type="submit" onclick="copy()">Copy</button>
+
+   </div>
+    <textarea id="tarea"></textarea>
+  </div>
+    <script>
+      function copy() {
+        k = document.getElementById("copypaste").value;
+        navigator.clipboard.writeText(k);
+      }
+    </script>
+  </body>
+</html>

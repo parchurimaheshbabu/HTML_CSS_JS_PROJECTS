@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+ box-sizing:border-box;
+    margin: 0;
+}
+
+/* .sidebar{
+
+    display: flex;
+} */
+
+.side{
+background-color: pink;
+width: 200px;
+height: 100%;
+position: fixed;
+}
+
+ul li{
+    list-style-type: none;
+    margin: 25px 0 ;
+    
+    
+    
+}
+ul li a{
+    text-decoration: none;
+    padding: 0 30px ;
+}
+.side h4{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* @media (max-width:740px) {
+    side{
+        display: block;
+        width:100%;
+    } */
