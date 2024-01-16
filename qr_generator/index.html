@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+</head>
+<body>
+    <input type="text"  placeholder="enter url" id="urlInput"/>
+    <button type="submit" onclick="generateQr()">submit</button>
+    <p id="qrcode"></p>
+    <script>
+    function generateQr(){
+        var url=document.getElementById('urlInput').value;
+        var qrcodediv=document.getElementById('qrcode');
+        var qrcode =new QrCode(qrcodediv){
+            text:url,
+            width:128,
+            height:128
+        }
+    }
+        </script>
+</body>
+</html>
