@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="body">
+        <div class="container">
+        <p>ToDO List APP</p>
+        <div class="main">
+            <input type="text" class="cont" id="cont">
+            <button type="submit" id="submit" class="submit" >Add</button>
+        </div>
+        <div class="rem">
+        <!-- <div class="tasks">
+            <p>task 1 </p>
+           <button type="submit" class="complete" id="complete" value="completed">complete</button>
+        
+        </div> -->
+        </div>
+        </div>
+    </div>
+       
+
+    <script>
+        let  input = document.getElementById('cont');
+        let btn=document.querySelector('.submit')
+        let rem=document.querySelector('.rem')
+
+
+         btn.addEventListener('keyup' ,()=>{
+
+
+            if (input.value.trim() !=0){
+            btn.classList.add('active')
+            }
+            else{
+                btn.classList.remove('active')
+            }
+         })
+
+       
+btn.addEventListener('click' ,()=>{
+    if (input.value.length !=0){
+        let newitem=document.createElement('div')
+        newitem.classList.add('tasks');
+        newitem.innerHTML=`<p>${input.value} </p>
+           <button type="submit" class="complete" id="complete" >complete</button>
+        `
+rem.appendChild(newitem);
+input.value='';
+    }
+    else{
+        alert('please enter a task')
+    }
+})
+
+        document.addEventListener('click', function(event) {
+
+        if (event.target && event.target.className == 'complete') {
+                let paragraph = event.target.previousElementSibling;
+                paragraph.classList.toggle('completed');
+            };
+        })
+    </script>
+
+</body>
+</html>
